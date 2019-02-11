@@ -1,0 +1,55 @@
+dn: cn=admin,dc=example,dc=edu
+objectClass: simpleSecurityObject
+objectClass: organizationalRole
+cn: admin
+userPassword: password
+description: LDAP administrator
+
+
+dn: cn=somegroup,ou=Groups,dc=example,dc=edu
+changetype: add
+objectClass: top
+objectClass: posixGroup
+objectClass: groupOfUniqueNames
+gidNumber: 10001
+cn: somegroup
+uniqueMember: uid=casuser,ou=People,dc=example,dc=edu
+uniqueMember: uid=joebuck,ou=People,dc=example,dc=edu
+
+dn: uid=casuser,ou=People,dc=example,dc=edu
+changetype: add
+uid: casuser
+objectClass: top
+objectClass: account
+objectClass: posixaccount
+objectClass: inetOrgPerson
+objectClass: person
+objectClass: inetUser
+objectClass: organizationalPerson
+uidNumber: 1001
+gidNumber: 1001
+givenName: Firstname
+sn: Lastname
+homeDirectory: /home/username
+cn: Firstname Lastname
+userPassword: password
+mail: casuser@example.edu
+
+
+dn: uid=joebuck,ou=People,dc=example,dc=edu
+changetype: add
+uid: joebuck
+objectClass: top
+objectClass: account
+objectClass: posixaccount
+objectClass: inetOrgPerson
+objectClass: person
+objectClass: inetUser
+objectClass: organizationalPerson
+uidNumber: 1002
+gidNumber: 1002
+givenName: Joe
+sn: Buck
+homeDirectory: /home/joebuck
+cn: Joe Buck
+userPassword: password
