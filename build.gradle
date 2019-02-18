@@ -44,7 +44,7 @@ dependencies {
     // Other CAS dependencies/modules may be listed here...
     
     // https://apereo.github.io/cas/development/installation/Configuring-SAML2-Authentication.html
-    compile "org.apereo.cas:cas-server-support-saml-idp:${project.'cas.version'}"
+    compile "org.apereo.cas:cas-server-support-saml-idp:${casServerVersion}"
     
     // https://apereo.github.io/cas/development/installation/LDAP-Authentication.html
     compile "org.apereo.cas:cas-server-support-ldap:${casServerVersion}"
@@ -53,7 +53,7 @@ dependencies {
     compile "org.apereo.cas:cas-server-support-json-service-registry:${casServerVersion}"
 	
     // https://apereo.github.io/cas/development/integration/Configuring-SAML-SP-Integrations.html#saml-sp-integrations
-    compile "org.apereo.cas:cas-server-support-saml-sp-integrations:${project.'cas.version'}"
+    compile "org.apereo.cas:cas-server-support-saml-sp-integrations:${casServerVersion}"
 }
 
 tasks.findByName("jibDockerBuild")
