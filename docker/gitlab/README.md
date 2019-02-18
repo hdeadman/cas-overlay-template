@@ -17,4 +17,5 @@ Pre-generated cert and key in ```example.org.crt``` and ```example.org.key``` fo
 
 ## Scripts 
 ```run.bat``` and ```restart.bat``` for running gitlab container in Docker For Windows (Use cmd.exe)
-```run.sh``` and ```restart.sh``` for running gitlab container in Bash (on Mac or Linux, or git bash on windows if docker in path)
+
+```run.sh``` and ```restart.sh``` for running gitlab container in Bash (on Mac or Linux)
