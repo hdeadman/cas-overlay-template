@@ -30,7 +30,7 @@ uidNumber: 1001
 gidNumber: 1001
 givenName: Firstname
 sn: Lastname
-homeDirectory: /home/username
+homeDirectory: /home/casuser
 cn: Firstname Lastname
 userPassword: password
 mail: casuser@example.edu
