@@ -45,6 +45,9 @@ apply from: rootProject.file("gradle/dockerjib.gradle")
 dependencies {
     // Other CAS dependencies/modules may be listed here...
     // compile "org.apereo.cas:cas-server-support-json-service-registry:${casServerVersion}"
+    compile ("org.apache.tomcat.embed:tomcat-embed-core:9.0.24") {
+        transitive = false;
+    }
 }
 
 tasks.findByName("jibDockerBuild")
@@ -93,7 +96,7 @@ bootWar {
         cas {
             from "org.apereo.cas:cas-server-webapp${project.appServer}:${casServerVersion}@war"
             provided = false
-            //excludes = ["WEB-INF/lib/somejar-1.0*"]
+            excludes = ["WEB-INF/lib/tomcat-embed-core-9.0.26.jar"]
         }
     }    
 }
