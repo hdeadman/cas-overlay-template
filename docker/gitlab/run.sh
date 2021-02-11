@@ -8,9 +8,9 @@ mkdir $GITLAB_BASE/config
 mkdir $GITLAB_BASE/config/ssl
 mkdir $GITLAB_BASE/logs
 mkdir $GITLAB_BASE/data
-copy gitlab.rb $GITLAB_BASE/config
-copy $DOMAIN.key $GITLAB_BASE/config/ssl/gitlab.key
-copy $DOMAIN.crt $GITLAB_BASE/config/ssl/gitlab.crt
+cp gitlab.rb $GITLAB_BASE/config
+cp $DOMAIN.key $GITLAB_BASE/config/ssl/gitlab.key
+cp $DOMAIN.crt $GITLAB_BASE/config/ssl/gitlab.crt
 docker run --detach --name $CONTAINER_NAME -p 8444:443 \
   --volume $GITLAB_BASE/config:/etc/gitlab \
   --volume $GITLAB_BASE/logs:/var/log/gitlab \
